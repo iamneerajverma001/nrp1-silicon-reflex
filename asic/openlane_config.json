@@ -1,0 +1,39 @@
+{
+  "DESIGN_NAME": "snn_core_top",
+  "VERILOG_FILES": [
+    "dir::../rtl/snn_core_top.v",
+    "dir::../rtl/delta_encoder.v",
+    "dir::../rtl/stdp_synapse_unit.v",
+    "dir::../rtl/stdp_trace_generator.v",
+    "dir::../rtl/synapse_crossbar_256.v",
+    "dir::../rtl/lif_neuron_array.v",
+    "dir::../rtl/lateral_inhibition.v",
+    "dir::../rtl/icm42688_spi_master.v",
+    "dir::../rtl/servo_reflex_pwm.v"
+  ],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 83.333,
+  "DESIGN_IS_CORE": 0,
+  "FP_SIZING": "absolute",
+  "DIE_AREA": [
+    0,
+    0,
+    390,
+    390
+  ],
+  "CORE_AREA": [
+    10,
+    10,
+    380,
+    380
+  ],
+  "FP_CORE_UTIL": 55,
+  "PL_TARGET_DENSITY": 0.58,
+  "PL_BASIC_PLACEMENT": 0,
+  "SYNTH_STRATEGY": "AREA 0",
+  "FP_PIN_ORDER_CFG": "dir::pin_order.cfg",
+  "RUN_KLAYOUT_DRC": true,
+  "RUN_MAGIC_DRC": true,
+  "RUN_CVA": true,
+  "MAGIC_GENERATE_LEF": true
+}

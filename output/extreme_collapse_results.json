@@ -1,0 +1,177 @@
+{
+  "regime_1_slew_tsunami": {
+    "regime": "Slew-Rate Numerical Wrap-Around",
+    "collapse_observed": true,
+    "tipping_point_slew_counts_per_step": 32767,
+    "true_diff": 60000,
+    "wrapped_16bit_diff": -5536,
+    "spikes_up": 1,
+    "spikes_down": 0,
+    "failure_mode": "Directional Inversion & Inverted Reflex Action"
+  },
+  "regime_2_subharmonic_siren": {
+    "regime": "Resonant Ratcheting False-Alarm",
+    "collapse_observed": true,
+    "tipping_point_period_steps": 7,
+    "tipping_point_freq_hz": 571.4,
+    "duty_cycle_cliff_pct": 14.3,
+    "results_by_period": {
+      "9": {
+        "period_steps": 9,
+        "period_ms": 2.25,
+        "frequency_hz": 444.44444444444446,
+        "duty_cycle_pct": 11.11111111111111,
+        "anomaly_latched": false,
+        "alarm_step": null
+      },
+      "8": {
+        "period_steps": 8,
+        "period_ms": 2.0,
+        "frequency_hz": 500.0,
+        "duty_cycle_pct": 12.5,
+        "anomaly_latched": true,
+        "alarm_step": 144
+      },
+      "7": {
+        "period_steps": 7,
+        "period_ms": 1.75,
+        "frequency_hz": 571.4285714285714,
+        "duty_cycle_pct": 14.285714285714285,
+        "anomaly_latched": true,
+        "alarm_step": 63
+      },
+      "6": {
+        "period_steps": 6,
+        "period_ms": 1.5,
+        "frequency_hz": 666.6666666666666,
+        "duty_cycle_pct": 16.666666666666664,
+        "anomaly_latched": true,
+        "alarm_step": 36
+      },
+      "5": {
+        "period_steps": 5,
+        "period_ms": 1.25,
+        "frequency_hz": 800.0,
+        "duty_cycle_pct": 20.0,
+        "anomaly_latched": true,
+        "alarm_step": 25
+      },
+      "4": {
+        "period_steps": 4,
+        "period_ms": 1.0,
+        "frequency_hz": 1000.0,
+        "duty_cycle_pct": 25.0,
+        "anomaly_latched": true,
+        "alarm_step": 16
+      },
+      "3": {
+        "period_steps": 3,
+        "period_ms": 0.75,
+        "frequency_hz": 1333.3333333333333,
+        "duty_cycle_pct": 33.33333333333333,
+        "anomaly_latched": true,
+        "alarm_step": 9
+      }
+    },
+    "failure_mode": "Permanent Emergency Actuator Lockup from Sparse Sub-Harmonic Glitches"
+  },
+  "regime_3_seizure_avalanche": {
+    "regime": "Synchronous Seizure Avalanche",
+    "collapse_observed": true,
+    "synchrony_index_pct": 100.0,
+    "shannon_entropy_bits": 4.584962500721156,
+    "max_theoretical_entropy": 4.584962500721156,
+    "firing_frequency_khz": 1.0,
+    "failure_mode": "Epileptic Network Synchronization & Zero Information Capacity"
+  },
+  "regime_4_catastrophic_amnesia": {
+    "regime": "Catastrophic Synaptic Erasure",
+    "collapse_observed": false,
+    "t_half_ms": 4.5,
+    "t_erase_ms": null,
+    "t_inversion_ms": null,
+    "final_cosine_similarity": 0.3471815489482381,
+    "failure_mode": "Total Synaptic Amnesia & Weight Polarity Inversion under Uncontrolled Plasticity"
+  },
+  "regime_5_quantization_coma": {
+    "regime": "Sub-Threshold Quantization Coma",
+    "collapse_observed": true,
+    "delta_threshold": 14,
+    "coma_cliff_amplitude_counts": 5,
+    "coma_acceleration_cliff_mg": 6.8359375,
+    "sweep_data": [
+      {
+        "amplitude_counts": 20,
+        "spikes_emitted": 84,
+        "is_coma": false
+      },
+      {
+        "amplitude_counts": 16,
+        "spikes_emitted": 57,
+        "is_coma": false
+      },
+      {
+        "amplitude_counts": 15,
+        "spikes_emitted": 44,
+        "is_coma": false
+      },
+      {
+        "amplitude_counts": 14,
+        "spikes_emitted": 36,
+        "is_coma": false
+      },
+      {
+        "amplitude_counts": 13,
+        "spikes_emitted": 36,
+        "is_coma": false
+      },
+      {
+        "amplitude_counts": 12,
+        "spikes_emitted": 33,
+        "is_coma": false
+      },
+      {
+        "amplitude_counts": 10,
+        "spikes_emitted": 15,
+        "is_coma": false
+      },
+      {
+        "amplitude_counts": 8,
+        "spikes_emitted": 12,
+        "is_coma": false
+      },
+      {
+        "amplitude_counts": 5,
+        "spikes_emitted": 0,
+        "is_coma": true
+      },
+      {
+        "amplitude_counts": 2,
+        "spikes_emitted": 0,
+        "is_coma": true
+      },
+      {
+        "amplitude_counts": 0,
+        "spikes_emitted": 0,
+        "is_coma": true
+      }
+    ],
+    "failure_mode": "Zero Spike Emission / Total Sensoric Silence"
+  },
+  "regime_6_spi_desync": {
+    "regime": "SPI Desynchronization & Bit-Slip",
+    "collapse_observed": false,
+    "nominal_values": {
+      "ax": 4660,
+      "ay": 22136,
+      "az": 32
+    },
+    "corrupted_values": {
+      "ax": 9320,
+      "ay": -21264,
+      "az": 64
+    },
+    "z_explosion_ratio": 2.0,
+    "failure_mode": "Catastrophic Sensor Word Framing Corruption & Spurious Emergency Reflex"
+  }
+}

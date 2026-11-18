@@ -1,0 +1,55 @@
+# ==============================================================================
+# NRP-1 Neuromorphic Processor: Git Ignore Specification
+# ==============================================================================
+
+# Python Virtual Environments & Caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+build/
+dist/
+*.egg-info/
+
+# HDL Simulation Artifacts & Dumps
+*.vvp
+*.vcd
+*.vpd
+*.dmp
+*.log
+sim/*.vvp
+sim/*.vcd
+sim/*.csv
+rtl_trace.csv
+run_sim.vvp
+
+# FPGA EDA Build Caches (Vivado, Yosys, nextpnr)
+.Xil/
+*.jou
+*.pb
+*.str
+*.runs/
+*.sim/
+*.ip_user_files/
+*.hw/
+*.cache/
+*.bit
+*.bin
+*.asc
+fpga/**/*.asc
+fpga/**/*.bin
+fpga/**/*.json
+
+# ASIC OpenLane Build Runs
+runs/
+openlane/runs/
+asic/runs/
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini

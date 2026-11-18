@@ -1,0 +1,34 @@
+{
+  "fixed_threshold": {
+    "false_alarms": 1,
+    "trip_timestamp_ms": 1339.5,
+    "fault_latency_ms": null,
+    "status": "FAIL (False alarm on Speed Sweep at 1339.50 ms)"
+  },
+  "hpf_energy": {
+    "false_alarms": 1,
+    "trip_timestamp_ms": 945.5,
+    "fault_latency_ms": null,
+    "status": "FAIL (False alarm on Speed Sweep at 945.50 ms)"
+  },
+  "envelope_tracking": {
+    "false_alarms": 1,
+    "trip_timestamp_ms": 176.25,
+    "fault_latency_ms": null,
+    "status": "FAIL (False alarm on Speed Sweep at 176.25 ms)"
+  },
+  "frozen_snn": {
+    "false_alarms": 0,
+    "trip_timestamp_ms": 2003.0,
+    "fault_latency_ms": 3.0,
+    "status": "PASS (0 False Alarms + 3.000 ms Latency)"
+  },
+  "adaptive_nrp1": {
+    "false_alarms": 0,
+    "trip_timestamp_ms": 2001.75,
+    "fault_latency_ms": 1.75,
+    "initial_weight_norm": 450.08,
+    "adapted_weight_norm": 1417.51,
+    "status": "PASS (0 False Alarms + 1.750 ms Latency)"
+  }
+}

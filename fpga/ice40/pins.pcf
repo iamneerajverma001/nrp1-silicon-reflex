@@ -1,0 +1,22 @@
+# ==============================================================================
+# Lattice iCE40UP5K-SG48 Pin Constraints (NRP-1 Silicon Reflex Core)
+# Package: SG48 (48-pin QFN, 0.5mm pitch)
+# ==============================================================================
+
+# Clock & Reset
+set_io clk          35   # 12.0 MHz System Clock (External Oscillator)
+set_io rst_n        34   # Active-Low Hardware Reset (Pull-up button)
+set_io learn_switch 32   # Active-High Online Plasticity Toggle Switch
+
+# ICM-42688-P 6-Axis IMU SPI Interface (PMOD A)
+set_io spi_sck      28   # SPI Mode 0 Bus Clock (6.0 MHz)
+set_io spi_cs_n     38   # SPI Chip Select (Active Low)
+set_io spi_mosi     42   # SPI Master Out Slave In
+set_io spi_miso     36   # SPI Master In Slave Out
+set_io imu_int1     43   # Hardware Data-Ready Interrupt (4 kHz)
+
+# Actuation & Telemetry (PMOD B)
+set_io servo_pwm    26   # 50 Hz Hardware Micro-Servo Pulse Output
+set_io alarm_led    40   # RGB LED Blue: Latched Anomaly Alarm
+set_io clamp_led    39   # RGB LED Red: Emergency Mechanical Cutoff
+set_io uart_tx      27   # 115,200 Baud Asynchronous Telemetry

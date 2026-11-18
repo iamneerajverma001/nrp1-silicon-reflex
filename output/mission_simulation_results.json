@@ -1,0 +1,29 @@
+{
+  "simulation_parameters": {
+    "sampling_frequency_hz": 4000,
+    "sample_period_us": 250.0,
+    "total_timesteps": 10000,
+    "mission_duration_seconds": 2.5
+  },
+  "timings": {
+    "fault_onset_ms": 2000.0,
+    "pre_spike_latency_ms": 0.0,
+    "post_spike_latency_ms": 0.0,
+    "alarm_assert_latency_ms": 2.0000000000002274,
+    "servo_trip_latency_ms": 2.0000000000002274
+  },
+  "reliability": {
+    "false_alarms_in_baseline_and_armed": 0,
+    "false_alarm_rate_percent": 0.0
+  },
+  "power_and_energy": {
+    "static_power_mw": 0.42,
+    "dynamic_power_mw": 0.05084664,
+    "total_power_mw": 0.47084664,
+    "energy_per_synaptic_event_nj": 2.15
+  },
+  "weights": {
+    "initial_l2_norm": 450.0755492136848,
+    "final_entrained_l2_norm": 1383.8410313327179
+  }
+}

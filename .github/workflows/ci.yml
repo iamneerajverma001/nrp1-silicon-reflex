@@ -1,0 +1,40 @@
+name: NRP-1 Neuromorphic Processor CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  verify:
+    name: 6-Tier Silicon & Mathematical Verification
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install Icarus Verilog
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y iverilog
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+        cache: 'pip'
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Check RTL and Markdown Integrity
+      run: |
+        python scripts/check_integrity.py
+
+    - name: Execute Full 6-Tier Verification Suite
+      run: |
+        python run_verification.py

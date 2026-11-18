@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this neuromorphic processor design, synthesizable Verilog RTL, or verification framework in academic research or engineering capstones, please cite it as below."
+title: "NRP-1: A 0.47 mW Event-Driven Neuromorphic Reflex Processor with On-Chip Online STDP Learning for Sub-2 Millisecond Cyber-Physical Actuation"
+authors:
+  - family-names: "Research Capstone Team"
+    given-names: "ECE Major Project"
+version: "1.0.0"
+date-released: 2026-11-19
+url: "https://github.com/nrp1-neuromorphic/nrp1-silicon-reflex"
+keywords:
+  - neuromorphic computing
+  - spiking neural networks
+  - spike-timing-dependent plasticity (STDP)
+  - digital VLSI
+  - cyber-physical reflexes
+  - ultra-low-power
+  - edge intelligence
