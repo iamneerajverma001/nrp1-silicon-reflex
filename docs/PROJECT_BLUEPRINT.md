@@ -1,5 +1,5 @@
-# PLATFORM-AGNOSTIC NEUROMORPHIC REFLEX PROCESSOR (NRP-1)
-## Architectural Specification, Theoretical Foundations & Multi-Target Implementation Blueprint
+# NRP-1 NEUROMORPHIC REFLEX PROCESSOR: ARCHITECTURAL BLUEPRINT
+## System Specifications, Synthesizable RTL Microarchitecture & Verification Blueprint
 ### Multiplier-Less Spiking Neural Network with On-Chip Local Plasticity for Ultra-Low-Power Sensory Reflex Arcs
 
 **Project Designation:** Neuromorphic Reflex Processor (NRP-1)  
@@ -56,13 +56,6 @@ This project rejects black-box simulation shortcuts by completing the full-stack
 3. **Cycle-Accurate Lockstep Verification:** Verified hardware execution in 100% bit-exact lockstep against the golden model across all 7 hardware signals (`s_pre`, `v_ref`, `t_pre`, `w00`, `s_post`, `burst_cnt`, `alarm_led`) with zero mismatches.
 4. **FPGA Hardware Emulation:** Successfully targeted Lattice iCE40 UltraPlus (88% LUT utilization) and Xilinx Spartan-7 / Artix-7 fabrics with timing closure at 12.0 MHz.
 5. **ASIC Physical Design Sign-Off:** Pushed through the open-source OpenLane 2 ASIC flow on SkyWater 130nm CMOS (`sky130_fd_sc_hd`), generating DRC-clean and LVS-clean tapeout-ready GDSII layouts ($0.85\ \text{mm}^2$ macro).
-
----
-
-### The 30-Second Elevator Pitch & Viva Defense
-> *"Most edge AI today runs slow software on generic, power-hungry processors. For our ECE Major Project, we designed an on-hardware Spiking Neuromorphic Processor from scratch in synthesizable Verilog that learns continuously on-chip using STDP and acts like a silicon spinal cord—triggering physical reflexes in under 2 milliseconds at microwatt power.*
-> 
-> *We proved its real-time learning on an FPGA against complex variable-speed motor vibrations where traditional filters fail, and we pushed the design through the complete VLSI flow down to a tapeout-ready SkyWater 130nm GDSII silicon layout."*
 
 ---
 
@@ -263,9 +256,9 @@ A rigorous research specification must define the physical failure boundaries an
 # 5. ARCHITECTURAL DICHOTOMY: GENERAL-PURPOSE VS. DEDICATED REFLEX SILICON
 
 > [!NOTE]
-> **Complete Business, Semiconductor Economics & Defensive Pitch Dossier:**  
-> The comprehensive macroeconomic analysis, competitive comparison matrix (vs. NVIDIA Jetson, ARM Ethos, SynSense Xylo, BrainChip Akida), investor pitch Q&A playbook, commercial GTM pathways (IP licensing vs. 3D co-packaging), and foundational literature citations with verbatim quotes and paper DOIs have been segregated into the dedicated companion dossier:  
-> 🔗 **[`NRP1_STRATEGIC_BUSINESS_DEFENSE_DOSSIER.md`](./NRP1_STRATEGIC_BUSINESS_DEFENSE_DOSSIER.md)**
+> **Market Benchmarking & Semiconductor Economics Companion Dossier:**  
+> Comprehensive macroeconomic analysis, competitive architecture comparisons (vs. NVIDIA Jetson, ARM Ethos, SynSense Xylo, BrainChip Akida), commercial GTM pathways (IP licensing vs. 3D co-packaging), and foundational literature citations with verbatim quotes and paper DOIs are documented in the companion dossier:  
+> 🔗 **[`DEFENSE_DOSSIER.md`](./DEFENSE_DOSSIER.md)**
 
 ### 5.1 The Architectural "Brain vs. Spine" Partition
 Computer engineering for autonomous embodied systems (humanoids, industrial machinery, spacecraft) requires an explicit biological separation of concerns:
@@ -277,7 +270,7 @@ Conventional edge microcontroller architectures attempt to reduce average power 
 1. **The 10 ms Mechanical Slip Boundary:** Shear slip in robotic tactile fingertips propagates at $> 1.0\ \text{m/s}$. A microcontroller sleeping on a $50\ \text{ms}$ polling interval will drop delicate objects before its next wake cycle.
 2. **The 10 mW Thermal Necrosis Limit in Medical Implants:** Intracranial epilepsy detectors cannot duty-cycle without risking missing transient pre-ictal spikes; yet continuous execution of conventional MCUs burns $50\text{–}150\ \text{mW}$, heating brain tissue beyond safe thermal limits ($> 1.0^\circ\text{C}$).
 
-NRP-1 eliminates this trade-off by providing continuous, non-blind, 4.0 kHz sensory evaluation, hard digital anomaly detection within $1.601\ \text{ms}$ (19,213 clock cycles / 6 sample steps), and immediate $< 1\ \mu\text{s}$ hardware PWM timer restart upon latch assertion (eliminating up to 20 ms of PWM frame latency) while consuming **$< 0.44\ \text{mW}$** of simulated digital core power ($< 3.0\ \text{mW}$ FPGA chip budget). For in-depth economic defense and pitch validation, refer to the [Strategic Business & Defense Dossier](./NRP1_STRATEGIC_BUSINESS_DEFENSE_DOSSIER.md).
+NRP-1 eliminates this trade-off by providing continuous, non-blind, 4.0 kHz sensory evaluation, hard digital anomaly detection within $1.601\ \text{ms}$ (19,213 clock cycles / 6 sample steps), and immediate $< 1\ \mu\text{s}$ hardware PWM timer restart upon latch assertion (eliminating up to 20 ms of PWM frame latency) while consuming **$< 0.44\ \text{mW}$** of simulated digital core power ($< 3.0\ \text{mW}$ FPGA chip budget). For in-depth market analysis and competitive architecture benchmarking, refer to the [Strategic Business & Defense Dossier](./DEFENSE_DOSSIER.md).
 
 ---
 
@@ -3178,5 +3171,5 @@ As an undergraduate ECE major capstone project, NRP-1 establishes that hardware-
 
 
 ---
-*The Platform-Agnostic Neuromorphic Reflex Processor Project Bible is permanently archived on Desktop:*
-`C:\Users\NEERAJ\Desktop\SUB3MW_ICE40_STDP_PROJECT_BIBLE.md`
+*The NRP-1 Neuromorphic Reflex Processor Architecture Blueprint is maintained in the root repository:*
+`docs/PROJECT_BLUEPRINT.md`

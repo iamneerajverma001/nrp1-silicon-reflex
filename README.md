@@ -144,7 +144,7 @@ nrp1-silicon-reflex/
 │   └── signoff_metrics.md         # DRC/LVS, density, and STA timing slack report
 │
 ├── docs/                          # Living Documentation & Deliverables
-│   ├── PROJECT_BIBLE.md           # 16-Chapter Technical Bible (SSOT synchronized)
+│   ├── PROJECT_BLUEPRINT.md           # 16-Chapter Hardware Architecture Blueprint (SSOT synchronized)
 │   ├── DEFENSE_DOSSIER.md         # Strategic Business & Viva Defense Playbook
 │   ├── figures/                   # High-resolution benchmark comparison plots
 │   └── paper/                     # IEEE 6-page conference draft LaTeX template

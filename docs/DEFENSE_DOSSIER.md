@@ -5,7 +5,7 @@
 **Classification:** Research, Executive Pitch & Commercial Defense Dossier  
 **Target Audience:** Venture Evaluators, Semiconductor Architects, Grant Committees, Defense Reviewers  
 **Revision:** 1.0.0 (Production Release)  
-**Companion Engineering Bible:** [`SUB3MW_ICE40_STDP_PROJECT_BIBLE.md`](./SUB3MW_ICE40_STDP_PROJECT_BIBLE.md)
+**Companion Architecture Blueprint:** [`PROJECT_BLUEPRINT.md`](./PROJECT_BLUEPRINT.md)
 
 ---
 
@@ -182,7 +182,7 @@ This section compiles the exact questions raised by tier-1 silicon architects, V
   *"Modern AI works because of backpropagation and gradient descent. Spiking networks have non-differentiable threshold functions. How do you guarantee convergence without backprop?"*
 * **The Definitive Technical Defense:**
   1. **Biological Real-Time Truth:** Biology does not use backpropagation; brains do not stop the world, run a forward pass, cache intermediate activations across gigabytes of DRAM, and execute a backward error pass. Reflexes rely on **local, forward-only Hebbian timing** ($T_{\text{pre}} - T_{\text{post}}$).
-  2. **Mathematical Proof of Discrete STDP Convergence:** In Section 3.2 of the Project Bible, we derive the discrete shift-add approximation of the classical Bi & Poo STDP kernel:
+  2. **Mathematical Proof of Discrete STDP Convergence:** In Section 3.2 of the Project Blueprint, we derive the discrete shift-add approximation of the classical Bi & Poo STDP kernel:
      $$\Delta W = \begin{cases} +\lfloor T_{\text{pre}} \gg 1 \rfloor & \text{if } S_{\text{post}} \land \neg S_{\text{pre}} \\ -\lfloor T_{\text{post}} \gg 1 \rfloor & \text{if } S_{\text{pre}} \land \neg S_{\text{post}} \end{cases}$$
      Because weights are strictly bounded by directional saturation clippers ($[-128, +127]$), the system forms a Lyapunov-stable dynamical attractor. As shown in our mission simulation, the weight norm converges monotonically ($450.08 \to 1315.27$) in under 1.5 seconds.
   3. **Cycle-Accurate Pre-Silicon Verification:** We built a bit-exact, register-accurate Python and C++ testbench (`sim/bit_exact_simulator.py`) that mirrors every clock cycle and logic branch of the synthesizable Verilog modules, ensuring zero discrepancy between mathematical theory and synthesized gates.
@@ -195,7 +195,7 @@ This section compiles the exact questions raised by tier-1 silicon architects, V
   *"You are demonstrating this on a motor. Industrial motors already have vibration sensors and PLCs. Why design a custom neuromorphic silicon processor just to monitor a motor?"*
 * **The Definitive Technical Defense:**
   1. **The Motor is Our Test Vehicle, Not the Silicon Boundary:** In aerospace, wind tunnels test airfoils; the wind tunnel is not the product. In our project, the variable-speed motor is our **demanding non-stationary physical test vehicle**. Because the motor accelerates from $3,000$ to $7,200\ 	ext{RPM}$ ($50 	o 120\ 	ext{Hz}$), its rotational harmonics shift dynamically across the frequency spectrum.
-  2. **Traditional Filters Provably Fail on Non-Stationary Physics:** As proven in our 5-arm ablation benchmark (Section 11.5 of the Project Bible), standard digital signal processing (e.g., a 2nd-order Butterworth High-Pass Filter with $f_c = 200\ 	ext{Hz}$) trips a catastrophic **false alarm at $t = 945.5\ 	ext{ms}$** because the 2nd harmonic ($240\ 	ext{Hz}$) enters the filter passband during normal acceleration. Fixed-threshold comparators fail at $t = 1339.5\ 	ext{ms}$. Only NRP-1’s adaptive STDP receptive fields learn the harmonic progression in real time, achieving **$0.00\%$ false alarms** while catching a sudden $1.2\ 	ext{kHz}$ fracture in $1.601\ 	ext{ms}$.
+  2. **Traditional Filters Provably Fail on Non-Stationary Physics:** As proven in our 5-arm ablation benchmark (Section 11.5 of the Project Blueprint), standard digital signal processing (e.g., a 2nd-order Butterworth High-Pass Filter with $f_c = 200\ 	ext{Hz}$) trips a catastrophic **false alarm at $t = 945.5\ 	ext{ms}$** because the 2nd harmonic ($240\ 	ext{Hz}$) enters the filter passband during normal acceleration. Fixed-threshold comparators fail at $t = 1339.5\ 	ext{ms}$. Only NRP-1’s adaptive STDP receptive fields learn the harmonic progression in real time, achieving **$0.00\%$ false alarms** while catching a sudden $1.2\ 	ext{kHz}$ fracture in $1.601\ 	ext{ms}$.
   3. **A Universal Edge Reflex Silicon Architecture:** The exact same NRP-1 core interfaces with any dynamic event-driven transducer:
      * *Robotic Tactile Manipulation:* Sub-2ms cutaneous slip reflex for humanoid hands to clamp fragile objects before they slip and drop.
      * *Aviation & Drone Flight Protection:* Instant microsecond rotor-strike and propeller-loss cutoffs before airframe resonance tears the drone apart.

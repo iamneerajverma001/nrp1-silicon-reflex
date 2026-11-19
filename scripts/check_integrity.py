@@ -25,7 +25,7 @@ for f in files:
         print(f"  [PASS] {f}: Pure IEEE 1364-2001 synthesizable Verilog.")
 
 # Check 2: Markdown Code Fences
-md_files = [os.path.join(docs_dir, "PROJECT_BIBLE.md"), os.path.join(docs_dir, "DEFENSE_DOSSIER.md")]
+md_files = [os.path.join(docs_dir, "PROJECT_BLUEPRINT.md"), os.path.join(docs_dir, "DEFENSE_DOSSIER.md")]
 fences_ok = True
 for mp in md_files:
     with open(mp, 'r', encoding='utf-8') as fp:

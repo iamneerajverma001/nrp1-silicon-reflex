@@ -4,17 +4,17 @@ import re
 
 repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 rtl_dir = os.path.join(repo_root, "rtl")
-bible_path = os.path.join(repo_root, "docs", "PROJECT_BIBLE.md")
+blueprint_path = os.path.join(repo_root, "docs", "PROJECT_BLUEPRINT.md")
 
 print("=" * 80)
 print("SSOT SYNCHRONIZER: VERIFYING & SYNCHRONIZING DOCS WITH REAL RTL")
 print("=" * 80)
 
-with open(bible_path, "r", encoding="utf-8") as f:
-    bible = f.read()
+with open(blueprint_path, "r", encoding="utf-8") as f:
+    blueprint = f.read()
 
 rtl_files = [f for f in os.listdir(rtl_dir) if f.endswith(".v")]
-print(f"Auditing {len(rtl_files)} RTL modules against {bible_path}...")
+print(f"Auditing {len(rtl_files)} RTL modules against {blueprint_path}...")
 
 all_synced = True
 for rf in sorted(rtl_files):
@@ -22,9 +22,9 @@ for rf in sorted(rtl_files):
     with open(mod_path, "r", encoding="utf-8") as f:
         mod_code = f.read().strip()
     
-    # Check if module code exists in Bible
-    if mod_code in bible:
-        print(f"  [PASS] {rf:25s}: 100% Bit-Exact Match with Project Bible.")
+    # Check if module code exists in Blueprint
+    if mod_code in blueprint:
+        print(f"  [PASS] {rf:25s}: 100% Bit-Exact Match with Project Blueprint.")
     else:
         print(f"  [NOTICE] {rf:25s}: Minor formatting/whitespace discrepancy detected.")
 
